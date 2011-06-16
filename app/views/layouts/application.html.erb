@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Ruby on Rails Termproj Moon App | <%= @title %></title>
+  <title><%= title %></title>
   <%= csrf_meta_tag %>
-</head>
-
+  <%= render 'layouts/stylesheets' %>
+</head> 
 <body>
-
-<%= yield %>
-
+  <div class="container">
+    <%= render 'layouts/header' %>
+	  <div id="content">
+	  <%= render 'layouts/navigation' %>	
+	  <section>
+	    <%= yield %>
+	  </section>
+	  <%= render 'layouts/news' %>
+	  </div>
+	  <%= render 'layouts/footer' %>
+	  
+  </div> 
 </body>
 </html>

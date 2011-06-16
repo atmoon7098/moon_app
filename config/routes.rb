@@ -1,9 +1,8 @@
 MoonApp::Application.routes.draw do
-  get "mypages/home"
-
-  get "mypages/contact"
-
-  get "mypages/about"
+  match '/contact', :to => 'mypages#contact'
+  match '/about',   :to => 'mypages#about'
+  match '/',        :to => 'mypages#home'
+  root :to => 'mypages#home'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
