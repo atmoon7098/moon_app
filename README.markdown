@@ -1,5 +1,7 @@
 # Ruby on Rails Application
 
-This is the second-version of experimental application
-for COIN067 class.
-by Tien-Jan Moon (5/29/2011)
+Term Project for COIN067 Ruby on Rails.
+This is an application for posting items for sail. The application provides 
+functionalities similar to that of craigslist.org with login capability.
+
+by Tien-Jan Moon  created 5/29/2011

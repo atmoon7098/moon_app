@@ -1,4 +1,10 @@
 MoonApp::Application.routes.draw do
+  get "mypages/home"
+
+  get "mypages/contact"
+
+  get "mypages/about"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
