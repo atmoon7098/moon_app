@@ -1,17 +1,18 @@
 .container {
   width: 812px;
   background: #FCE2CC;
-  border-right: 5px solid #e4caae;
-  border-left: 5px solid #e4caae;
+  border-right: 5px solid #DFD0CB;//#F0C688;//#e4caae;
+  border-left: 5px solid #DFD0CB;//#F0C688;//#e4caae;
 }
 body {
   background: #FDE6D3;
 }
-
+/*
 header img {
   border-right: 5px solid #e4caae;
   border-left: 5px solid #e4caae;
 }
+*/
 section {
   //margin-top: 1em;
   font-size: 120%;
@@ -29,6 +30,14 @@ section h2 {
   font-family: Comic Sans MS;
   color: #334d55;
 }
+
+section a:visited {
+  color: #722A28; //darkred;
+}
+section a:hover {
+  color: #07f;//#069;
+  text-decoration: underline;
+}
 /* Navigation */
 nav {
   clear: both;
@@ -38,7 +47,6 @@ nav {
   padding: 7px;
   border-bottom: 2px solid #d9b58d;
   border-right: 1px solid #d9b58d;
-  //border-left: 5px solid #e4caae;
   background: #FBD9BD;//#FCE2CC;
 }
 nav h2 {
@@ -78,7 +86,6 @@ news {
   min-height: 205px;
   padding: 7px;
   border-bottom: 2px solid #d9b58d;
-  //border-right: 5px solid #e4caae;
   border-left: 1px solid #d9b58d;
   background: #FCE2DA;
 }
@@ -89,7 +96,7 @@ news h2 {
 }
 /* Links */
 a {
-  color: #069;//#07f;
+  color: #07f;
   text-decoration: none;
 }
 
@@ -99,7 +106,7 @@ a:hover {
 }
 
 a:visited {
-  color: #07f;//#069;
+  color: #069;
 }
 footer {
   clear: both;
@@ -107,11 +114,15 @@ footer {
   font-size: 90%;
   color: #334d55; 
   text-align: center;
-  width: 795px;
+  width: 797px;
   height: 24px;
   background: #FBD9BD;
-  //border-right: 5px solid #e4caae;
-  //border-left: 5px solid #e4caae;
+  border-bottom: 2px solid #d9b58d;
+  border-top: 1px solid #d9b58d;
+}
+footer a:hover {
+  color: #07f;//#069;
+  text-decoration: underline;
 }
 .round {
   -moz-border-radius:    10px;

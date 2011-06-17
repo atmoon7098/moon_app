@@ -1,6 +1,8 @@
 MoonApp::Application.routes.draw do
   resources :categories, :only => [:index, :show]
+  get "users/new"
  
+  match '/registration', :to=> 'users#new', :as => "registration"
   match '/contact', :to => 'mypages#contact'
   match '/about',   :to => 'mypages#about'
   match '/',        :to => 'mypages#home'

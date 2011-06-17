@@ -7,7 +7,6 @@ class CategoriesController < ApplicationController
   def show
     @category = Category.find(params[:id])
 	@title = @category.name
-	#redirect_to :action=>"show", :id=>params[:id]
   end
 
 end
