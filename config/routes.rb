@@ -1,9 +1,15 @@
 MoonApp::Application.routes.draw do
+  resources :categories, :only => [:index, :show]
+ 
   match '/contact', :to => 'mypages#contact'
   match '/about',   :to => 'mypages#about'
   match '/',        :to => 'mypages#home'
+  
   root :to => 'mypages#home'
-
+  match 'categories/:id', :to => 'categories#show', :as => "cat"
+  
+  #match '/signout', :to => 'sessions#destroy', :as => :signout
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

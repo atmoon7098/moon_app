@@ -1,0 +1,8 @@
+<p>
+  <% news = News.find :all, :limit=>2, :order=>'date desc' %>
+  <% news.each do |item| %>
+  <b><%= item.title %></b><br/>
+  <%= item.date %><br/>
+  <%= item.article %><br/><br/>
+  <% end %>
+</p>

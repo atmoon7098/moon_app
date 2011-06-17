@@ -1,29 +1,33 @@
 .container {
   width: 812px;
-  background: #FCE2CC;//#FBD9BD;
+  background: #FCE2CC;
   border-right: 5px solid #e4caae;
   border-left: 5px solid #e4caae;
 }
 body {
   background: #FDE6D3;
 }
+
+header img {
+  border-right: 5px solid #e4caae;
+  border-left: 5px solid #e4caae;
+}
 section {
   //margin-top: 1em;
   font-size: 120%;
-  //padding: 20px;
   float: left;
-  min-height: 255px;
-  //width: 52%;
-  width: 441px;
+  min-height: 300px;
+  width: 430px;
   padding: 10px;
-  //border-top: 5px solid #e4caae;
-  //border-left: 1px solid #dee;
-  //border-right: 1px solid #d9b58d;
   background: #FCE2CC;//#FBD9BD;
-  //margin-bottom: 10px;
 }
 section h1 {
   font-size: 200%;
+}
+section h2 {
+  font-size: 160%;
+  font-family: Comic Sans MS;
+  color: #334d55;
 }
 /* Navigation */
 nav {
@@ -33,9 +37,8 @@ nav {
   min-height: 255px;
   padding: 7px;
   border-bottom: 2px solid #d9b58d;
-  //border-left: 1px solid #e4caae;
-  //border-top: 5px solid #e4caae;
   border-right: 1px solid #d9b58d;
+  //border-left: 5px solid #e4caae;
   background: #FBD9BD;//#FCE2CC;
 }
 nav h2 {
@@ -58,23 +61,24 @@ nav ul li {
 nav ul li a {
   padding: 0 5px;
   font-weight: bold;
+  color: #069; //#07f;
 }
 
 nav ul li a:visited {
-  color: #07f;
+  color: #069;
 }
 
 nav ul li a:hover {
   text-decoration: underline;
+  color: #07f;
 }
 news {
   float: right;
-  width: 19%;
+  width: 20%;
   min-height: 205px;
   padding: 7px;
-  border-bottom: 3px solid #d9b58d;
-  //border-right: 1px solid #e4caae;
-  //border-top: 5px solid #e4caae;
+  border-bottom: 2px solid #d9b58d;
+  //border-right: 5px solid #e4caae;
   border-left: 1px solid #d9b58d;
   background: #FCE2DA;
 }
@@ -85,17 +89,17 @@ news h2 {
 }
 /* Links */
 a {
-  color: #07f;
+  color: #069;//#07f;
   text-decoration: none;
 }
 
 a:hover {
-  color: #069;
+  color: #07f;//#069;
   text-decoration: underline;
 }
 
 a:visited {
-  color: #069;
+  color: #07f;//#069;
 }
 footer {
   clear: both;
@@ -105,7 +109,9 @@ footer {
   text-align: center;
   width: 795px;
   height: 24px;
-  background: #FBD9BD;//#FCE2DA;
+  background: #FBD9BD;
+  //border-right: 5px solid #e4caae;
+  //border-left: 5px solid #e4caae;
 }
 .round {
   -moz-border-radius:    10px;

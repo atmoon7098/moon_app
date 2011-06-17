@@ -8,15 +8,15 @@
 <body>
   <div class="container">
     <%= render 'layouts/header' %>
-	  <div id="content">
-	  <%= render 'layouts/navigation' %>	
-	  <section>
-	    <%= yield %>
-	  </section>
-	  <%= render 'layouts/news' %>
-	  </div>
+	  <div class="content">
+	    <%= render 'layouts/navigation' %>	
+	    <section>
+	      <%= yield %>
+	    </section>
+	    <%= render 'layouts/news' %>
+	    </div>
 	  <%= render 'layouts/footer' %>
-	  
+	  <%= debug(params) if Rails.env.development? %>
   </div> 
 </body>
 </html>
