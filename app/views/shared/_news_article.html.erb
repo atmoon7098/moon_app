@@ -2,7 +2,7 @@
   <% news = News.find :all, :limit=>2, :order=>'date desc' %>
   <% news.each do |item| %>
     <b><%= item.title %></b><br/>
-    <%= item.date %><br/>
+    <%= item.date.strftime("%Y-%m-%d %H:%M:%S") %><br/>
     <%= item.article %><br/><br/>
   <% end %>
 </p>
