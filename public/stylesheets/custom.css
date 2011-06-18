@@ -30,6 +30,9 @@ section p {
   //font-size: 100%;
   font-weight: 500;
 }
+section a a:link {
+  color: #069;
+}
 section a:visited {
   color: #722A28; //darkred;
 }
@@ -114,7 +117,7 @@ footer {
   color: #334d55; 
   text-align: center;
   width: 797px;
-  height: 24px;
+  height: 18px;
   background: #FBD9BD;
   border-bottom: 2px solid #d9b58d;
   border-top: 1px solid #d9b58d;
