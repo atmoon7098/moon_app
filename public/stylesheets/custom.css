@@ -7,12 +7,7 @@
 body {
   background: #FDE6D3;
 }
-/*
-header img {
-  border-right: 5px solid #e4caae;
-  border-left: 5px solid #e4caae;
-}
-*/
+
 section {
   //margin-top: 1em;
   font-size: 120%;
@@ -30,7 +25,11 @@ section h2 {
   font-family: Comic Sans MS;
   color: #334d55;
 }
-
+section p {
+  color: #334D55;
+  //font-size: 100%;
+  font-weight: 500;
+}
 section a:visited {
   color: #722A28; //darkred;
 }
@@ -83,7 +82,7 @@ nav ul li a:hover {
 news {
   float: right;
   width: 20%;
-  min-height: 205px;
+  min-height: 200px;
   padding: 7px;
   border-bottom: 2px solid #d9b58d;
   border-left: 1px solid #d9b58d;
@@ -129,3 +128,47 @@ footer a:hover {
   -webkit-border-radius: 10px;
   //border-radius:         10px;
 }
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+.field_with_errors {
+  margin-top: 10px;
+  padding: 2px;
+  background-color: #98060d;//red;
+  display: table;
+}
+
+.field_with_errors label {
+  color: #fff;
+}
+
+#error_explanation {
+  width: 400px;
+  border: 2px solid #98060d;//red;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  background-color: #c10710;//#c00;
+  color: #fff;
+}
+
+#error_explanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
