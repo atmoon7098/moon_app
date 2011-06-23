@@ -15,23 +15,40 @@ namespace :db do
     Category.create!(:name => "homes for sail") 
     Category.create!(:name => "homes for rent")	
 	
-	Category.find(1).ads(1).create!(:email => "foobar-5@sbcglobal.net",
+	Category.all.each do |item|
+      5.times do |n|
+	    email = "example-#{n+1}@railstutorial.org"
+        item.ads.create!(:content => Faker::Lorem.sentence(5),
+		                     :email => email,
+							 :user_id => 1)
+							 
+      end
+    end	
+	
+	Ad.create!(:email => "example-1@railstutorial.org",
 			   :user_id => 1,
+			   :category_id => 1,
                :content => "4br fabulous fully furnished Belvedere Lagoon home short term rental.")
-	Category.find(1).ads(2).create!(:email => "barfoo-6@sbcglobal.net",
+	Ad.create!(:email => "example-2@railstutorial.org",
 			   :user_id => 2,
+			   :category_id => 1,
                :content => "2br beautiful & sunny apartment in Haight Ashbury with large deck & garden.")
-	Category.find(2).ads(1).create!(:email => "foobar-3@yahoo.com",
+	Ad.create!(:email => "example-3@railstutorial.org",
 			   :user_id => 1,
+			   :category_id => 2,
                :content => "3br resort lifestyle in the heart of Tiburon!.")
-	Category.find(2).ads(2).create!(:email => "barfoo-4@google.com",
+	Ad.create!(:email => "example-4@railstutorial.org",
 			   :user_id => 2,
+			   :category_id => 2,
+			   :post_id => 200000022,
                :content => "2br/2ba two level condo w/master suite & parking.")
-	Category.find(3).ads(1).create!(:email => "foobar-1@yahoo.com",
+	Ad.create!(:email => "example-5@railstutorial.org",
 			   :user_id => 1,
+			   :category_id => 3,
                :content => "$2500 large master badroom w/private bathrom & parking.")
-	Category.find(3).ads(2).create!(:email => "barfoo-2@google.com",
-			   :user_id => 2,
+	Ad.create!(:email => "example-6@railstutorial.org",
+			   :user_id => 1,
+			   :category_id => 3,
                :content => "$875 fernished room in upscale Victorian - 1 blk to UCLA.")
   end
 end

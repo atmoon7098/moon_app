@@ -4,12 +4,12 @@ module SessionsHelper
     self.current_user = user
   end
   # add 06/22/2011
-  def post_ad_of(category)
-    current_category = category
+  def post_ad_of(category_id)
+    current_category = category_id
   end
   # add 06/22/2011
-  def current_category=(category)
-    @current_category = category
+  def current_category=(category_id)
+    @current_category = category_id
   end
   # add 06/22/2011
   def current_category
