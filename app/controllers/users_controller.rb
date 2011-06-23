@@ -6,6 +6,10 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
 	@title = @user.name
+	if signed_in?
+      #@feed_items = current_user.feed.paginate(:page => params[:page], :per_page => 3)
+	  @ads = @user.ads.paginate(:page => params[:page], :per_page => 3)
+    end
   end
   def create
     @user = User.new(params[:user])

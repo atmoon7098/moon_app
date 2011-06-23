@@ -1,1 +1,15 @@
 <h1><%= @user.name %></h1>
+
+<table class="profile" summary="Profile information">
+  <tr>
+    <td class="main">
+	  <% unless @user.ads.empty? %>
+        <table class="ads" summary="User ads">
+		  <h1 class="ad">Ads</h1>
+          <%= render @ads %>
+        </table>
+        <%= will_paginate @ads %>
+      <% end %>
+    </td>
+  </tr>
+</table>

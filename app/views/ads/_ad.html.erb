@@ -1,0 +1,10 @@
+<tr>
+  <td class="ad">    
+    <span class="timestamp">
+	  <strong>Post id:</strong> <%= 10000000+ad.id %>&nbsp;&nbsp;&nbsp;
+      <strong>Posted on:</strong> <%= ad.created_at.strftime("%Y-%m-%d %H:%M:%S") %>
+    </span>
+	<span class="email"><strong>Sailer's email:</strong> <%= ad.email %></span>
+	<span class="content"><%= ad.content %></span>	
+  </td>
+</tr>

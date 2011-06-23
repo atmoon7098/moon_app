@@ -13,6 +13,7 @@ section {
   font-size: 120%;
   float: left;
   min-height: 300px;
+  //max-height: 480px;
   width: 430px;
   padding: 10px;
   background: #FCE2CC;//#FBD9BD;
@@ -45,7 +46,7 @@ nav {
   clear: both;
   float: left;
   width: 19%;
-  min-height: 255px;
+  min-height: 200px; //255px;
   padding: 7px;
   border-bottom: 2px solid #d9b58d;
   border-right: 1px solid #d9b58d;
@@ -175,3 +176,67 @@ div.field, div.actions {
   list-style: square;
 }
 
+h1.ad {
+  margin-bottom: 0.3em;
+}
+
+table.ads {
+  margin-top: 1em;
+}
+
+table.ads tr {
+  height: 80px;
+}
+
+table.ads tr td.gravatar {
+  border-top: 1px solid #ccc;
+  vertical-align: top;
+  width: 50px;
+}
+
+table.ads tr td.ad {
+  border-top: 1px solid #ccc;
+  vertical-align: top;
+  padding-top: 10px;
+}
+
+table.ads tr td.ad span.timestamp {
+  display: block;
+  font-size: 85%;
+  color: #334d55;
+}
+table.ads tr td.ad span.content {
+  display: block;
+  font-size: 85%;
+  color: #334d55;
+}
+table.ads tr td.ad span.email {
+  display: block;
+  font-size: 85%;
+  color: #334d55;
+}
+
+div.category_info img {
+  padding-right: 0.1em;
+}
+
+div.category_info a {
+  text-decoration: none;
+}
+
+div.category_info span.category_name {
+  position: absolute;
+}
+
+div.category_info span.ads {
+  font-size: 80%;
+}
+
+form.new_ad {
+  margin-bottom: 2em;
+}
+
+form.new_ad textarea {
+  height: 4em;
+  margin-bottom: 0;
+}

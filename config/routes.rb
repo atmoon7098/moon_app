@@ -1,7 +1,8 @@
 MoonApp::Application.routes.draw do
-  resources :categories, :only => [:index, :show]
+  resources :categories, :only => [:show]
   resources :users
   resources :sessions, :only => [:new, :create, :destroy]
+  resources :ads, :only => [:create, :destroy]
  
   match '/registration', :to => 'users#new', :as => :registration
   match '/users/:id', :to => 'users#show'
@@ -14,6 +15,7 @@ MoonApp::Application.routes.draw do
   
   root :to => 'mypages#home'
   match 'categories/:id', :to => 'categories#show', :as => :cat
+  #match 'categories/:id', :to => 'categories#post', :as => :postat
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
