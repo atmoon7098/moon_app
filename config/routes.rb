@@ -15,6 +15,8 @@ MoonApp::Application.routes.draw do
   
   root :to => 'mypages#home'
   match 'categories/:id', :to => 'categories#show', :as => :cat
+  match 'ads/:id', :to => 'ads#show'
+  
   #match 'categories/:id', :to => 'categories#post', :as => :postat
   
   # The priority is based upon order of creation:

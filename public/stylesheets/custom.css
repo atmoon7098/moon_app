@@ -215,7 +215,11 @@ table.ads tr td.ad span.email {
   font-size: 85%;
   color: #334d55;
 }
-
+table.ads tr td.ad span.delete {
+  display: block;
+  font-size: 85%;
+  color: #334d55;
+}
 div.category_info img {
   padding-right: 0.1em;
 }

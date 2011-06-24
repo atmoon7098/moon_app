@@ -20,7 +20,7 @@
     <% if !signed_in? %>
       <td><%= link_to "Please sign in to post ads", signin_path %></td>
 	<% else %>
-	  <td><%= "Please post your ad!" %></td>
+	  <td><%= link_to @current_user.name, @current_user %><%= " Please post your ad!" %></td>
 	  
 	<% end %>
   </tr>

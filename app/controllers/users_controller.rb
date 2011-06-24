@@ -8,7 +8,7 @@ class UsersController < ApplicationController
 	@title = @user.name
 	if signed_in?
       #@feed_items = current_user.feed.paginate(:page => params[:page], :per_page => 3)
-	  @ads = current_user.ads.paginate(:page => params[:page], :per_page => 3)
+	  @user_ads = current_user.ads.paginate(:page => params[:page], :per_page => 3)
     end
   end
   def create

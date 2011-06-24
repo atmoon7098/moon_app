@@ -5,11 +5,12 @@
     <td class="main">
 	  <% unless @user.ads.empty? %>
         <table class="ads" summary="User ads">
-		  <h1 class="ad">Ads</h1>
-          <%= render @ads %>
+		  <h2 class="ad">Posted ads</h2>
+          <%= render @user_ads %>
         </table>
-        <%= will_paginate @ads %>
+        <%= will_paginate @user_ads %>
       <% end %>
     </td>
+	
   </tr>
 </table>

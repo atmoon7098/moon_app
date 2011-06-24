@@ -7,7 +7,7 @@ class CategoriesController < ApplicationController
   
   def show
     @category = Category.find(params[:id])
-	
+	#@user_ads = current_user.ads.paginate(:page => params[:page], :per_page => 3)
 	@ads = @category.ads.paginate(:page => params[:page], :per_page => 3)
 	@title = @category.name
 	store_location

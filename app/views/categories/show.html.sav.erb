@@ -1,5 +1,5 @@
 <h1><%= @category.name.capitalize %></h1>
-
+<td><%= @category.id %></td>
 <% if signed_in? %>
   <%= form_for @ad do |f| %>
     <div class="field">
@@ -21,7 +21,7 @@
     <% if !signed_in? %>
       <td><%= link_to "Please sign in to post ads", signin_path %></td>
 	<% else %>
-	  <td><%= "Please post your ad!" %></td>
+	  <td><%= @category.id %></td>
 	<% end %>
   </tr>
 </table>
