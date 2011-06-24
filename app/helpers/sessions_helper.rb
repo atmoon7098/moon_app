@@ -3,18 +3,6 @@ module SessionsHelper
     cookies.permanent.signed[:remember_token] = [user.id, user.salt]
     self.current_user = user
   end
-  # add 06/22/2011
-  def post_ad_of(category_id)
-    current_category = category_id
-  end
-  # add 06/22/2011
-  def current_category=(category_id)
-    @current_category = category_id
-  end
-  # add 06/22/2011
-  def current_category
-    @current_category
-  end
   
   def current_user=(user)
     @current_user = user
