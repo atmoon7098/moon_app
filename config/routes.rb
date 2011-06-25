@@ -2,7 +2,7 @@ MoonApp::Application.routes.draw do
   resources :categories, :only => [:show]
   resources :users
   resources :sessions, :only => [:new, :create, :destroy]
-  resources :ads, :only => [:create, :destroy]
+  resources :ads
  
   match '/registration', :to => 'users#new', :as => :registration
   match '/users/:id', :to => 'users#show'

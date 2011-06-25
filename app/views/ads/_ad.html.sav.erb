@@ -7,11 +7,15 @@
 	<span class="email"><strong>Sailer's email:</strong> <%= ad.email %></span>
 	<span class="content"><%= ad.content %></span>	
   </td>
-  <% if current_user.id == ad.user_id %>
+  <% if signed_in? %>
+  <% if user = ad.user rescue User.find(ad.user_id) %>
+  <% if current_user.id == user.id %>
   <td>
-    <%= link_to "delete it?", current_user, :method => :delete,
+    <%= link_to "delete", current_user, :method => :delete,
                                      :confirm => "You sure?",
                                      :title => ad.content %>
   </td>
-  <% end %> 
+  <% end %>
+  <% end %>
+  <% end %>  
 </tr>

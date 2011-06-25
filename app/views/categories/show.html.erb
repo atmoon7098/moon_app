@@ -1,18 +1,7 @@
 <h1><%= @category.name.capitalize %></h1>
-<% if signed_in? %>  
-  <%= form_for @ad do |f| %> 
-    <div class="field">
-      <%= f.label :"Sailer's email " %><br/>
-      <%= f.text_field :email %>
-    </div>
-    <div class="field">
-	  <%= f.label :Description %><br/>
-      <%= f.text_area :content %>
-    </div>
-    <div class="actions">
-      <%= f.submit "Submit" %>
-    </div>
-  <% end %>
+
+<% if signed_in? %>
+  <%= render 'shared/ad_form' %>   
 <% end %>
 
 <table class="main">
@@ -20,8 +9,7 @@
     <% if !signed_in? %>
       <td><%= link_to "Please sign in to post ads", signin_path %></td>
 	<% else %>
-	  <td><%= link_to @current_user.name, @current_user %><%= " Please post your ad!" %></td>
-	  
+	  <td><%= link_to @current_user.name, current_user %><%= " Please post your ad!" %></td>	  
 	<% end %>
   </tr>
 </table>

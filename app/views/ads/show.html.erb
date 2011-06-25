@@ -1,1 +1,10 @@
-<h1>Ad</h1>
+<h1><%= @title %></h1>
+<p class="ad_info">
+  <strong><%= "PostingID: " %></strong><%= @ad.id + 10000000 %><br/>
+  <strong><%= "Category: " %></strong><%= Category.find(@ad.category_id).name %><br/>
+  <strong><%= "Created at: " %></strong><%= @ad.created_at.strftime("%Y-%m-%d %H:%M:%S") %><br/>
+  <strong><%= "Updated at: " %></strong><%= @ad.updated_at.strftime("%Y-%m-%d %H:%M:%S") %><br/>
+</p>
+<% if signed_in? %> 
+  <%= render 'shared/ad_form' %> 
+<% end %>

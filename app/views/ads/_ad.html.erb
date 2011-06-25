@@ -1,10 +1,19 @@
 <tr>
   <td class="ad">    
     <span class="timestamp">
-	  <strong>Post id:</strong> <%= 10000000+ad.id %>&nbsp;&nbsp;&nbsp;
-      <strong>Posted on:</strong> <%= ad.created_at.strftime("%Y-%m-%d %H:%M:%S") %>
+	  <% if signed_in? %>
+	    <strong>Post id:</strong> <%= link_to 10000000+ad.id, ad %>&nbsp;&nbsp;&nbsp;
+	  <% else %>
+	    <strong>Post id:</strong> <%= 10000000+ad.id %>&nbsp;&nbsp;&nbsp;
+	  <% end %>
+	  <strong>Posted at:</strong> <%= ad.updated_at.strftime("%Y-%m-%d %H:%M:%S") %><br/>
+	  <% if ad.category_id > 0 %>
+	    <strong>Category:</strong> <%= Category.find(ad.category_id).name %>
+	  <% end %>
+      
     </span>
 	<span class="email"><strong>Sailer's email:</strong> <%= ad.email %></span>
 	<span class="content"><%= ad.content %></span>	
-  </td>
+  </td> 
+  
 </tr>

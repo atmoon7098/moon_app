@@ -28,7 +28,12 @@ section h2 {
 }
 section p {
   color: #334D55;
-  //font-size: 100%;
+  font-size: 100%;
+  font-weight: 500;
+}
+section p.ad_info {
+  color: #334D55;
+  font-size: 85%;
   font-weight: 500;
 }
 section a a:link {
